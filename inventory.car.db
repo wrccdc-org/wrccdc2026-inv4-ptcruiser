@@ -1,0 +1,25 @@
+﻿CREATE TABLE inventory.Car (
+	Id INTEGER UNSIGNED auto_increment NOT NULL,
+	Vin varchar(100) NOT NULL,
+	`Year` YEAR NOT NULL,
+	Make varchar(100) NOT NULL,
+	Model varchar(100) NULL,
+	CONSTRAINT Car_Id_PK PRIMARY KEY (Id),
+	CONSTRAINT Vin_Car_Unique UNIQUE KEY (Vin)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO Car (Vin, Year, Make, Model)
+VALUES ("1FDKF37HXKKA20893","1989","Ford","F-350"),
+("1FUYFZYB8XL975682","1999","Freightliner","FLD120"),
+("1XPAD60X2MD219001","1991","Peterbilt","357"),
+("1GCCS198748212293","2004","Chevrolet","Colorado"),
+("1FD8X3ET4ME012737","2021","Ford","F-350 SD"),
+("JYARJ16E7DA029164","2013","Yamaha","YZF-R6"),
+("JF1ZNAE18K8701069","2019","Toyota","86"),
+("ZD4KYUB05NS000503","2022","Aprilla","RSV4"),
+("2HGFC2F59HH538706","2017","Honda","Civic"),
+("ZDM14B1W5JB007706","2018","Ducati","Panigale 959"),
+("JM1GJ1U50G1408395","2016","Mazda","Mazda6");

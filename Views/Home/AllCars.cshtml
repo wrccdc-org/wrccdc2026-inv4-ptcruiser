@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Car Tracker";
+}
+@model List<Car>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <td>ID</td>
+        <td>VIN</td>
+        <td>Year</td>
+        <td>Make</td>
+        <td>Model</td>
+        </thead>
+        <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>@obj.Id</td>
+                <td>@obj.Vin</td>
+                <td>@obj.Year</td>
+                <td>@obj.Make</td>
+                <td>@obj.Model</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
