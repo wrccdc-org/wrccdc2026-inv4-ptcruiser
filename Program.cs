@@ -33,6 +33,9 @@ app.MapOpenApi();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthorization();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.MapStaticAssets();
 
 app.MapControllers();
@@ -41,4 +44,4 @@ app.MapControllerRoute(
 		pattern: "{controller=Home}/{action=Index}/{id?}")
 	.WithStaticAssets();
 
-app.Run();
+app.Run("http://0.0.0.0:80");
